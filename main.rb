@@ -2,6 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 
 class URL

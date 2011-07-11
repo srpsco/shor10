@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
-require 'thin'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 

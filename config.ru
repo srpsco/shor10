@@ -1,2 +1,2 @@
-require 'shor10'
+require 'main'
 run Sinatra::Application
